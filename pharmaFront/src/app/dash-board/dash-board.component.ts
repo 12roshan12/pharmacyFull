@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dash-board',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashBoardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
+  }
+
+  checkUser(){
+
+    
+
+    if(sessionStorage.getItem("user")=="true" ){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
+  logout(){
+    sessionStorage.clear();
+    this.route.navigateByUrl('/authentication')
   }
 
 }
