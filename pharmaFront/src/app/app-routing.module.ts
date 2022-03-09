@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { DashBoardComponent } from './dash-board/dash-board.component';
+
 
 const routes: Routes = [
   {
@@ -20,6 +19,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./authentication/authentication.module').then(
         (m) => m.AuthenticationModule
+      ),
+  },
+  {
+    path: 'inventory',
+    loadChildren: () =>
+      import('./inventory/inventory.module').then(
+        (m) => m.InventoryModule
       ),
   },
 ];

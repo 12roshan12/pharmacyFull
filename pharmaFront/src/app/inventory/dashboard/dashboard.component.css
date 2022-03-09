@@ -1,0 +1,46 @@
+
+
+.collapseable{
+
+    
+
+
+}
+
+
+.collapsable-content{
+
+    @apply max-h-0 overflow-hidden transition-all ;
+
+    
+
+
+}
+
+.collapsable-content >ul>li {
+
+@apply p-4 pl-6 hover:bg-gray-900 rounded;
+}
+
+.collapsable-header{
+    
+    @apply flex items-center w-full block p-4 hover:bg-gray-900 rounded ;
+    
+}
+
+.collapsable-control:checked + .collapsable-header + .collapsable-content {
+
+    max-height: 100%;
+}
+
+.collapsable-label{
+
+    @apply flex  flex-1 justify-between after:content-["+"] ;
+
+}
+
+.collapsable-control:checked + .collapsable-header>.collapsable-label {
+    
+    @apply  after:content-["-"];
+}
+
