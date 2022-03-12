@@ -5,6 +5,9 @@ import { InventoryComponent } from './inventory.component';
 
 import {  InventoryRoutingModule } from './inventory.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SalesOrderComponent } from './sales-order/sales-order.component';
+import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
+import { IndexComponent } from './index/index.component';
 
 
 
@@ -13,7 +16,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     InventoryComponent,
-    DashboardComponent
+    DashboardComponent,
+    SalesOrderComponent,
+    PurchaseOrderComponent,
+    IndexComponent
     
   ],
   imports: [

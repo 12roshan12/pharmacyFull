@@ -13,3 +13,4 @@ export class InventoryComponent implements OnInit {
   }
 
 }
+

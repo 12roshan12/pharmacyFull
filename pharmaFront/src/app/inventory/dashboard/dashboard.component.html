@@ -45,14 +45,16 @@
       </div>
     </div>
 
-
+    
 
 
     <div>
+      <app-index></app-index>
+      <router-outlet></router-outlet>
     </div>
 
 
-
+    
 
 
   </div>
@@ -71,9 +73,9 @@
         <label class="collapsable-header" for="trigger"><div class="collapsable-label"><span>Inventory</span></div>   </label>
         <div class="collapsable-content ">
           <ul>
-            <li>Phurchase Order</li>
-            <li>bbb</li>
-            <li>ccc</li>
+            <li [routerLink]="['/inventory/purchase']" routerLinkActive="router-link-active">Phurchase Order</li>
+            <li [routerLink]="['/inventory/sales']" routerLinkActive="router-link-active">Sales Oder</li>
+            <li>Vendor Management</li>
           </ul>
         </div>
       </li>
