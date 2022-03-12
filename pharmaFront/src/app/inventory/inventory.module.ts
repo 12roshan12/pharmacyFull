@@ -8,6 +8,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SalesOrderComponent } from './sales-order/sales-order.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { IndexComponent } from './index/index.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+
+import { CommonModule } from '@angular/common';
+import { ItemsComponent } from './items/items.component';
 
 
 
@@ -19,13 +23,18 @@ import { IndexComponent } from './index/index.component';
     DashboardComponent,
     SalesOrderComponent,
     PurchaseOrderComponent,
-    IndexComponent
+    IndexComponent,
+    ItemsComponent
     
   ],
   imports: [
+    CommonModule,
     InventoryRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
    
     
   ],

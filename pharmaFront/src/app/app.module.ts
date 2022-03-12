@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InventoryComponent } from './inventory/inventory.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,    
